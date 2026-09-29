@@ -64,7 +64,7 @@ $DSH_HOME/storages/cost-meter/ledger.json        # 账本
 $DSH_HOME/storages/cost-meter/diagnostics.json   # 诊断（排障用）
 ```
 
-（本机即 `C:\Users\yxyhh\.dsh\storages\cost-meter\`）
+（Windows 下 `$DSH_HOME` 默认为 `%USERPROFILE%\.dsh`）
 
 - 原子写入（临时文件 + rename），变更后 1.5 秒去抖落盘，插件卸载时立即落盘。
 - **想清零重来**：停掉 DSH，删除 `ledger.json`，再启动即可（会自动重新回填历史）。
@@ -136,8 +136,8 @@ $DSH_HOME/storages/cost-meter/diagnostics.json   # 诊断（排障用）
 ## 安装 / 更新
 
 ```powershell
-# 在 profile 目录里把本包链接进来（本机已执行）
-node <DSH运行时>\node\bin\node.exe <DSH运行时>\pnpm\bin\pnpm.mjs add "link:D:\.Repo\harness\dsh-cost-meter"
+# 在 profile 目录里把本包链接进来（<插件目录> 换成你的 clone/checkout 路径）
+node <DSH运行时>\node\bin\node.exe <DSH运行时>\pnpm\bin\pnpm.mjs add "link:<插件目录>"
 ```
 
 再把包名加进 `profiles/<profile>/package.json` 的 `dsh.profile.bundles`。
