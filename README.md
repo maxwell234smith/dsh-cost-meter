@@ -14,8 +14,8 @@
 ## 安装
 
 ```sh
-# 从 GitHub 安装（建议锁到某个提交，见仓库提交列表）
-dsh plugin --profile desktop add github:maxwell234smith/dsh-cost-meter
+# 从 GitHub 安装（推荐锁到 tag 或某个提交，见仓库 Releases）
+dsh plugin --profile desktop add github:maxwell234smith/dsh-cost-meter#v0.1.0
 
 # 本地开发：直接链接源码目录
 dsh plugin --profile desktop add link:D:\path\to\dsh-cost-meter
