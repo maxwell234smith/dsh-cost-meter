@@ -1,0 +1,5 @@
+# dsh-cost-meter bundle：注册 Host 侧记账插件与浏览器侧费用徽标。
+# Host 半与 Client 半都是本包；profile 通过 dsh.profile.bundles 选择本 bundle。
+- insert:
+    - id: dsh-cost-meter
+      name: dsh-cost-meter

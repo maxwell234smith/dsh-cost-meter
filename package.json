@@ -1,0 +1,56 @@
+{
+  "name": "dsh-cost-meter",
+  "version": "0.1.0",
+  "description": "实时统计并显示你自己的 DeepSeek API 费用：跨全部会话与实验性调用，按官方闲时/忙时价区分，人民币计价。",
+  "author": "Zhihao Yang",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxwell234smith/dsh-cost-meter.git"
+  },
+  "homepage": "https://github.com/maxwell234smith/dsh-cost-meter#readme",
+  "bugs": {
+    "url": "https://github.com/maxwell234smith/dsh-cost-meter/issues"
+  },
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "src",
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "cost",
+    "usage",
+    "pricing",
+    "费用",
+    "闲时"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  }
+}
